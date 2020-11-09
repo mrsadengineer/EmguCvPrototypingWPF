@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmguCvPrototypingWpf.Desktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"
+        Height="450"
+        Width="800">
     <Grid>
-        
+ 
+        <Label Content="Emgu CV Prototyping"
+               HorizontalAlignment="Left"
+               Margin="10,10,0,0"
+               VerticalAlignment="Top"
+               FontWeight="Bold"
+               FontSize="18"
+               Height="34"
+               Width="193" />
+
+        <Image Height="421"
+               HorizontalAlignment="Left"
+               Margin="10,3,-14,-230"
+               x:Name="TestImage"
+               Stretch="Fill"
+               VerticalAlignment="Top"
+               Width="796"
+               Grid.Row="1" />
     </Grid>
 </Window>

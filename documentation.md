@@ -1,0 +1,3 @@
+-manage nuget package
+	-install emgu.cv -4.4
+	-install emgu.cv.runtime
