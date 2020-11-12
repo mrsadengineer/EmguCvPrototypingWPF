@@ -9,8 +9,8 @@
         Height="450"
         Width="800">
     <Grid>
- 
-        <Label Content="Emgu CV Prototyping"
+
+        <Label Content="Emgu CV Prototyping - Simple Cameraview"
                HorizontalAlignment="Left"
                Margin="10,10,0,0"
                VerticalAlignment="Top"
@@ -19,13 +19,14 @@
                Height="34"
                Width="193" />
 
-        <Image Height="421"
+        <Image Height="365"
                HorizontalAlignment="Left"
-               Margin="10,3,-14,-230"
-               x:Name="TestImage"
+               Margin="10,44,0,0"
+               x:Name="TestImage1"
                Stretch="Fill"
                VerticalAlignment="Top"
-               Width="796"
-               Grid.Row="1" />
+               Width="772" />
+
+
     </Grid>
 </Window>

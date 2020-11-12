@@ -1,0 +1,53 @@
+﻿<Window x:Class="MultiViewerEmguExampleWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultiViewerEmguExampleWpf"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="1035"
+        Width="1194.5">
+    <Grid Margin="0,0,2,9">
+
+
+
+        <Label Content="Emgu CV Prototyping - Multiple Cameraview"
+               HorizontalAlignment="Left"
+               Margin="0,10,0,0"
+               VerticalAlignment="Top"
+               FontWeight="Bold"
+               FontSize="18"
+               Height="34"
+               Width="408" />
+        <Image Height="425"
+               HorizontalAlignment="Left"
+               Margin="0,68,0,0"
+               x:Name="TestImage1"
+               Stretch="Fill"
+               VerticalAlignment="Top"
+               Width="425"
+               OpacityMask="#FFC98686" />
+        <Image Height="425"
+               HorizontalAlignment="Left"
+               Margin="660,68,0,0"
+               x:Name="TestImage2"
+               Stretch="Fill"
+               VerticalAlignment="Top"
+               Width="425" />
+        <Image Height="426"
+               HorizontalAlignment="Left"
+               Margin="10,526,0,0"
+               x:Name="TestImage3"
+               Stretch="Fill"
+               VerticalAlignment="Top"
+               Width="425" />
+        <Image Height="425"
+               HorizontalAlignment="Left"
+               Margin="682,527,0,0"
+               x:Name="TestImage4"
+               Stretch="Fill"
+               VerticalAlignment="Top"
+               Width="425" />
+    </Grid>
+</Window>
