@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using Emgu.CV;
 using Emgu.CV.Structure;
 using System.Runtime.InteropServices;
+using Emgu.CV.CvEnum;
 
 namespace MultiViewerEmguExampleWpf
 {
@@ -45,7 +46,7 @@ namespace MultiViewerEmguExampleWpf
             {
                 if (nextFrame != null)
                 {
-                  //  Image<Gray, byte> grayframe = nextFrame.Convert<Gray, byte>();
+                    //  Image<Gray, byte> grayframe = nextFrame.Convert<Gray, byte>();
 
                     //   var faces = m_cascade.DetectMultiScale(grayframe, 1.1, 3, new System.Drawing.Size(20, 20));
 
@@ -54,16 +55,104 @@ namespace MultiViewerEmguExampleWpf
                     //    nextFrame.Draw(face, new Bgr(0, 0, 0), 3);
                     //}
 
-                    TestImage1.Source = ToBitmapSource(nextFrame);
-                    TestImage2.Source = ToBitmapSource(nextFrame);
-                    TestImage3.Source = ToBitmapSource(nextFrame);
-                    TestImage4.Source = ToBitmapSource(nextFrame);
+
+
+                    displayCameraViewOne(nextFrame.Clone());
+                    displayCameraViewTwo(nextFrame.Clone());
+                    displayCameraViewThree(nextFrame.Clone());
+                    displayCameraViewFour(nextFrame.Clone());
+
+                    //TestImage2.Source = ToBitmapSource(nextFrame.Clone());
+                    //TestImage3.Source = ToBitmapSource(nextFrame.Clone());
+                    //TestImage4.Source = ToBitmapSource(nextFrame.Clone());
 
                     //  TestImage2.Source = ToBitmapSource(nextFrame);
 
                 }
             }
         }
+
+        private void displayCameraViewOne(Image<Bgr, byte> nextFrame1)
+        {
+
+           // Image<Bgr, byte> copy = nextFrame1;
+       
+            CvInvoke.PutText(
+            nextFrame1,
+            "CameraView One",
+            new System.Drawing.Point(10, 80),
+            FontFace.HersheyComplex,
+            2.0,
+            new Bgr(0, 255, 0).MCvScalar);
+
+
+
+  double fps = m_capture.GetCaptureProperty(Emgu.CV.CvEnum.CapProp.Fps);
+            
+            
+            CvInvoke.PutText(
+        nextFrame1,
+       "FPS: " + fps.ToString(),
+        new System.Drawing.Point(10, 160),
+        FontFace.HersheyComplex,
+        2.0,
+        new Bgr(0, 255, 0).MCvScalar);
+
+
+          
+
+
+            TestImage1.Source = ToBitmapSource(nextFrame1);
+        }
+
+        private void displayCameraViewTwo(Image<Bgr, byte> nextFrame1)
+        {
+
+            // Image<Bgr, byte> copy = nextFrame1;
+
+            CvInvoke.PutText(
+            nextFrame1,
+            "CameraView Two",
+            new System.Drawing.Point(10, 80),
+            FontFace.HersheyComplex,
+            2.0,
+            new Bgr(0, 255, 0).MCvScalar);
+
+            TestImage2.Source = ToBitmapSource(nextFrame1);
+        }
+
+        private void displayCameraViewThree(Image<Bgr, byte> nextFrame1)
+        {
+
+            // Image<Bgr, byte> copy = nextFrame1;
+
+            CvInvoke.PutText(
+            nextFrame1,
+            "CameraView Three",
+            new System.Drawing.Point(10, 80),
+            FontFace.HersheyComplex,
+            2.0,
+            new Bgr(0, 255, 0).MCvScalar);
+
+            TestImage3.Source = ToBitmapSource(nextFrame1);
+        }
+
+        private void displayCameraViewFour(Image<Bgr, byte> nextFrame1)
+        {
+
+            // Image<Bgr, byte> copy = nextFrame1;
+
+            CvInvoke.PutText(
+            nextFrame1,
+            "CameraView Four",
+            new System.Drawing.Point(10, 80),
+            FontFace.HersheyComplex,
+            2.0,
+            new Bgr(0, 255, 0).MCvScalar);
+
+            TestImage4.Source = ToBitmapSource(nextFrame1);
+        }
+
 
 
         [DllImport("gdi32")]

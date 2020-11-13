@@ -20,34 +20,63 @@
                FontSize="18"
                Height="34"
                Width="408" />
-        <Image Height="425"
-               HorizontalAlignment="Left"
-               Margin="0,68,0,0"
-               x:Name="TestImage1"
-               Stretch="Fill"
-               VerticalAlignment="Top"
-               Width="425"
-               OpacityMask="#FFC98686" />
-        <Image Height="425"
-               HorizontalAlignment="Left"
-               Margin="660,68,0,0"
-               x:Name="TestImage2"
-               Stretch="Fill"
-               VerticalAlignment="Top"
-               Width="425" />
-        <Image Height="426"
-               HorizontalAlignment="Left"
-               Margin="10,526,0,0"
-               x:Name="TestImage3"
-               Stretch="Fill"
-               VerticalAlignment="Top"
-               Width="425" />
-        <Image Height="425"
-               HorizontalAlignment="Left"
-               Margin="682,527,0,0"
-               x:Name="TestImage4"
-               Stretch="Fill"
-               VerticalAlignment="Top"
-               Width="425" />
+        
+        
+        
+        
+        <Border BorderThickness="1"
+                BorderBrush="#FF9B3A3A"
+                Width="425"
+                Height="425"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="0,50,0,0">
+            <Image Height="425"
+                   HorizontalAlignment="Left"
+                   Margin="-1,-1,-1,-5"
+                   x:Name="TestImage1"
+                   Stretch="Fill"
+                   VerticalAlignment="Top"
+                   Width="425" />
+        </Border>
+
+
+
+        <Border BorderThickness="1"
+                BorderBrush="#FF9B3A3A"
+                Width="425"
+                Height="425"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Margin="0,50,0,0">
+            <Image x:Name="TestImage2"
+                   Stretch="Fill" />
+        </Border>
+
+
+
+        <Border BorderThickness="1"
+            BorderBrush="#FF9B3A3A"
+            Width="425"
+            Height="425"
+            HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Margin="0,50,0,0">
+            <Image x:Name="TestImage3"
+                   Stretch="Fill" />
+        </Border>
+
+
+
+        <Border BorderThickness="1"
+                BorderBrush="#FF9B3A3A"
+                Width="425"
+                Height="425"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Margin="0,50,0,0">
+            <Image x:Name="TestImage4"
+                   Stretch="Fill" />
+        </Border>
     </Grid>
 </Window>
