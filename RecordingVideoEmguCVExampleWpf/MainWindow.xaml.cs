@@ -33,7 +33,7 @@ namespace RecordingVideoEmguCVExampleWpf
         double fps;
 
         string nameofRecording;              // = "nameofrecording";
-        string destin;          // = "E:\\rtest\\"; //"C:\\Users\\ITNOA\\Desktop\\savedVideoDHS\\"
+        string destin;          // = "E:\\rtest\\"; //"C:\\Users\\\\Desktop\\savedVideoDHS\\"
 
         bool fileChanged;
 
